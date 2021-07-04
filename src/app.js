@@ -11,7 +11,7 @@ const errorHandler=require('./error-handler/500');
 const app = express();
 const signin=require('./routes/signin');
 const signup=require('./routes/signup');
-
+const MONGODB_URL='mongodb+srv://sara:123/456@cluster0.dplzc.mongodb.net/AUTH?retryWrites=true&w=majority';
 
 // Process JSON input and put the data on req.body
 app.use(express.json());
@@ -24,7 +24,7 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/error',(req,res)=>{
-    throw new error('error');
+    throw new error ('error');
 });
 
 app.use('/signin',signin);
