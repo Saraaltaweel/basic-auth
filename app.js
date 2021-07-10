@@ -16,7 +16,7 @@ const errorHandler=require('./src/error-handler/500');
 const app = express();
 const signin=require('./src/routes/signin');
 const signup=require('./src/routes/signup');
-const MONGODB_URL=process.env.MONGODB_URL;
+const MONGODB_URI=process.env.MONGODB_URI;
 app.use(cors());
 app.use(morgan('dev'));
 const port = process.env.PORT;
