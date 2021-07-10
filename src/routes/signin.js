@@ -6,6 +6,8 @@ const bcrypt = require('bcrypt');
 const base64 = require('base-64');
 const signin = express.Router();
 const Users=require('../model/user');
+const basic = require('../middleware/basic');
+
 // Signin Route -- login with username and password
 // test with httpie
 // http post :3000/signin -a john:foo
